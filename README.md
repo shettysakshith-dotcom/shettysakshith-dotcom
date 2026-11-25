@@ -7,6 +7,11 @@
 
 | Project | What it does | Impact | Stack |
 |---------|-------------|--------|-------|
+| **upliftpolicy** | Retention targeting by uplift with doubly-robust policy evaluation, including the customers outreach drives away | Top 30% by uplift adds **4.47** pts of retention vs **−0.23** for churn-ranked | Python, causal inference |
+| **attributiongap** | Markov attribution scored against holdout-experiment truth, with a per-channel bias factor | Corrects daily channel numbers between experiments (display over-credited **3.89x**) | Python |
+| **marginbridge** | Price-volume-mix margin bridge plus confounder-corrected price elasticity | Separates mix-shift (**88%**) from price erosion (**12%**) | Python |
+| **retail-margin-cockpit** | dbt star schema, DAX measure library and Power BI model with row-level security | **56** dbt tests; same access boundary enforced in Postgres | SQL, dbt, Power BI, DAX |
+| **field-ops-sql-cost-audit** | dbt + SQL reconciliation of field-operations data into cost-to-serve per job | Shows where SLA breaches concentrate by region and priority | SQL, dbt, DuckDB, Tableau |
 | **cuped** | Variance-reduction library that enforces temporal validity of covariates in A/B tests | Prevents post-randomization bias | Python, NumPy, SciPy, pytest |
 | **mixpriors** | Bayesian media mix model with informative priors and a budget optimizer | Maximizes expected return under posterior with risk bands | Python, PyMC, JAX, NumPyro, DuckDB |
 | **uattriage** | UAT analytics fitting defect-discovery curves to project latent defects | Forecasts go-live readiness with uncertainty | Python, SciPy, Plotly, DuckDB |
@@ -50,6 +55,11 @@
 
 ## ✦ Projects
 
+- [upliftpolicy](https://github.com/shettysakshith-dotcom/upliftpolicy) — Retention targeting by uplift with doubly-robust policy evaluation, including the customers your outreach drives away.
+- [attributiongap](https://github.com/shettysakshith-dotcom/attributiongap) — Markov attribution scored against experimental truth, publishing a per-channel bias factor that corrects the daily numbers.
+- [marginbridge](https://github.com/shettysakshith-dotcom/marginbridge) — A price-volume-mix margin bridge, plus price elasticity estimated against the confounder so the pricing recommendation does not come out backwards.
+- [retail-margin-cockpit](https://github.com/shettysakshith-dotcom/retail-margin-cockpit) — A governed margin and inventory model: tested dbt star schema, DAX measure library and a Power BI semantic model with row-level security.
+- [field-ops-sql-cost-audit](https://github.com/shettysakshith-dotcom/field-ops-sql-cost-audit) — A dbt + SQL project that reconciles messy field-operations data into a true cost-to-serve per job and shows where SLA breaches concentrate.
 - [cuped](https://github.com/shettysakshith-dotcom/cuped) — A CUPED variance-reduction library that refuses covariates measured after randomisation and tests that bias case explicitly.
 - [mixpriors](https://github.com/shettysakshith-dotcom/mixpriors) — A Bayesian media mix model with informative adstock and saturation priors, whose budget optimiser maximises expected return under the posterior with a stated…
 - [uattriage](https://github.com/shettysakshith-dotcom/uattriage) — UAT analytics that fit defect-discovery curves to project remaining latent defects and a go-live readiness date with an uncertainty band, instead of reporting…
